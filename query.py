@@ -16,7 +16,7 @@ def query_index(word, files_names, index_file_name):
         return
     for i, fr in enumerate(frequency):
         frequency[i] = str(fr) + ' ' + os.path.splitext(files_names[i])[0]
-    frequency.sort()
+    frequency.sort(reverse=True)
     print('Frequency for word ' + word + ':')
     for fr in frequency:
         print(fr)
